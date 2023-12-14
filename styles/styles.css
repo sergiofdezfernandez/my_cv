@@ -1,0 +1,16 @@
+@import url("variables.css");
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica,
+    Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+}
+
+header {
+  background-color: var(--steel-blue-900);
+  padding: 1em;
+}
+footer {
+  background-color: var(--steel-blue-700);
+  text-align: center;
+  bottom: 0;
+}
