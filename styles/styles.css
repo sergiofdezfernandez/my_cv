@@ -1,16 +1,150 @@
 @import url("variables.css");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica,
     Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+  color: var(--steel-blue-100);
+  background-color: var(--steel-blue-900);
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.typewriter {
+  animation: typing 4s steps(44) 1s 1 normal both,
+    blink-caret 1s steps(44) 7 normal forwards;
+  overflow: hidden;
+  border-right: 0.15em solid var(--steel-blue-300);
+  white-space: nowrap;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-color: var(--steel-blue-300);
+  }
+}
+h1::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 0.1em;
+  background-color: var(--steel-blue-500);
+  margin-top: 1em;
 }
 
 header {
-  background-color: var(--steel-blue-900);
   padding: 1em;
+  flex: 1;
+  text-align: center;
 }
+main {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+main section {
+  flex: 3;
+}
+aside {
+  flex: auto;
+  align-items: flex-end;
+}
+
+header img {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+}
+
 footer {
-  background-color: var(--steel-blue-700);
   text-align: center;
   bottom: 0;
+  padding: 1em;
+  flex: 1;
+}
+
+iframe {
+  flex: 0 0 70vw;
+  height: 38em;
+}
+ul {
+  display: inline-flex;
+  list-style-type: none;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
+}
+ul li a {
+  color: var(--steel-blue-300);
+}
+address a {
+  color: var(--steel-blue-200);
+}
+.recommendations {
+  color: var(--steel-blue-300);
+}
+.slider {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.slider iframe {
+  scroll-snap-align: center;
+  outline: none;
+}
+time {
+  font-style: italic;
+}
+card {
+  aspect-ratio: 3 / 4;
+  border-radius: calc(var(--radius) * 1px);
+  width: 260px;
+  position: relative;
+  grid-template-rows: 1fr auto;
+  box-shadow: 0 1rem 2rem -1rem black;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  backdrop-filter: blur(calc(var(--cardblur, 5) * 1px));
+}
+#btn {
+  color: var(--steel-blue-100);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: var(--steel-blue-200);
+  color: darkgray;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#btn:hover {
+  background-color: var(--steel-blue-100);
 }
