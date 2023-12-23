@@ -91,9 +91,6 @@ ul {
   padding: 0;
   margin: 0;
 }
-ul li a {
-  color: var(--steel-blue-300);
-}
 address a {
   color: var(--steel-blue-200);
 }
@@ -140,18 +137,31 @@ card {
   border: none;
   outline: none;
   background-color: var(--steel-blue-800);
-  color: darkgray;
+  color: var(--steel-blue-100);
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
 }
 #btn:hover {
   background-color: var(--steel-blue-100);
+  color: var(--steel-blue-700);
 }
 
 .social {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 5px;
+  font-size: 3em;
+}
+
+.social a {
+  color: var(--steel-blue-300);
+}
+
+.social a:hover {
+  color: var(--steel-blue-50);
+  background: var(--steel-blue-900);
+  border: 1px solid var(--steel-blue-900);
+  transform: scale(1.2);
 }
