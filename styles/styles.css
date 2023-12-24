@@ -115,18 +115,6 @@ address a {
 time {
   font-style: italic;
 }
-card {
-  aspect-ratio: 3 / 4;
-  border-radius: calc(var(--radius) * 1px);
-  width: 260px;
-  position: relative;
-  grid-template-rows: 1fr auto;
-  box-shadow: 0 1rem 2rem -1rem black;
-  padding: 1rem;
-  display: grid;
-  gap: 1rem;
-  backdrop-filter: blur(calc(var(--cardblur, 5) * 1px));
-}
 #btn {
   color: var(--steel-blue-50);
   position: fixed;
@@ -164,4 +152,66 @@ card {
   background: var(--steel-blue-900);
   border: 1px solid var(--steel-blue-900);
   transform: scale(1.2);
+}
+
+.card {
+  width: 100%;
+  border-radius: 2%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px var(--steel-blue-800);
+  padding: 1em;
+  margin: 1em;
+}
+
+details {
+  border: 1px solid var(--steel-blue-100);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+details[open] {
+  background-color: var(--steel-blue-800);
+}
+
+details > *:not(summary) {
+  margin-left: 20px;
+}
+
+.abilities {
+  display: flex;
+  text-align: center;
+}
+.abilities section {
+  background-color: var(--steel-blue-700);
+}
+@media (max-width: 600px) {
+  .abilities {
+    flex-direction: column; /* Change layout to column */
+  }
+  .social {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+img {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
 }
