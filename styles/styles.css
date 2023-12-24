@@ -81,8 +81,11 @@ footer {
 }
 
 iframe {
-  flex: 0 0 30vw;
+  flex: 0 0 50vw;
   height: 38em;
+  padding: 1em;
+  border: none;
+  border-radius: 30px;
 }
 ul {
   display: inline-flex;
@@ -151,7 +154,7 @@ address a {
 .card {
   border-radius: 2%;
   overflow: hidden;
-  box-shadow: 0 4px 8px var(--steel-blue-800);
+
   padding: 1em;
   margin: 1em;
 }
@@ -199,11 +202,21 @@ details > *:not(summary) {
 .books {
   display: flex;
   gap: 2em;
+  align-items: center;
+  text-align: center;
 }
-img {
-  width: 70%;
-  height: auto;
+.books img {
+  width: 200px;
+  height: 20em;
   border-radius: 10%;
+}
+.books .card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.books .card {
+  max-height: 25em;
+  box-shadow: 0 4px 8px var(--steel-blue-500);
 }
 .line {
   padding: 0 0 20px 20px;
@@ -227,4 +240,8 @@ img {
   display: inline-block;
   font-size: 1em;
   font-weight: 600;
+}
+.template {
+  display: flex;
+  gap: 2em;
 }
