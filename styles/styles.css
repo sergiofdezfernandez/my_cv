@@ -81,7 +81,7 @@ footer {
 }
 
 iframe {
-  flex: 0 0 70vw;
+  flex: 0 0 30vw;
   height: 38em;
 }
 ul {
@@ -93,9 +93,6 @@ ul {
 }
 address a {
   color: var(--steel-blue-200);
-}
-.recommendations {
-  color: var(--steel-blue-300);
 }
 .slider {
   display: flex;
@@ -111,9 +108,6 @@ address a {
 .slider iframe {
   scroll-snap-align: center;
   outline: none;
-}
-time {
-  font-style: italic;
 }
 #btn {
   color: var(--steel-blue-50);
@@ -155,7 +149,6 @@ time {
 }
 
 .card {
-  width: 100%;
   border-radius: 2%;
   overflow: hidden;
   box-shadow: 0 4px 8px var(--steel-blue-800);
@@ -190,28 +183,48 @@ details > *:not(summary) {
 .abilities section {
   background-color: var(--steel-blue-700);
 }
-@media (max-width: 600px) {
-  .abilities {
+@media (max-width: 928px) {
+  .abilities,
+  .slider,
+  .books {
     flex-direction: column; /* Change layout to column */
   }
   .social {
     grid-template-columns: repeat(1, 1fr);
   }
+  h1 {
+    font-size: 1em;
+  }
 }
-
-@keyframes show {
-  from {
-    opacity: 0;
-    scale: 25%;
-  }
-  to {
-    opacity: 1;
-    scale: 100%;
-  }
+.books {
+  display: flex;
+  gap: 2em;
 }
 img {
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-  animation-timeline: --image;
-  animation-name: show;
+  width: 70%;
+  height: auto;
+  border-radius: 10%;
+}
+.line {
+  padding: 0 0 20px 20px;
+  border-left: 2px solid var(--steel-blue-100);
+  position: relative;
+}
+.line::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -11.15px;
+  top: 30px;
+  background: var(--steel-blue-700);
+  border: 2px solid var(--steel-blue-100);
+}
+.date {
+  background-color: var(--steel-blue-700);
+  padding: 1em;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 600;
 }

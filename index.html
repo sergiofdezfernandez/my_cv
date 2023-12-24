@@ -97,11 +97,13 @@
           </div>
         </article>
       </section>
-      <section>
+      <section class="line">
         <h2>Experiencia laboral</h2>
         <article class="card">
           <h3>FullStack Software Developer</h3>
-          <p><time datetime="01-10-2022">Octubre de 2022</time> - Actual</p>
+          <p class="date">
+            <time datetime="01-10-2022">Octubre de 2022</time> - Actual
+          </p>
           <picture>
             <img
               src="img/deimos.jpg"
@@ -123,19 +125,21 @@
           </details>
         </article>
         <article class="card">
-          <h3>Software Engineer Intership</h3>
-          <p>
-            <time datetime="01-06-2019">Junio de 2019</time> -
-            <time datetime="30-09-2019">Septiembre de 2019</time>
-          </p>
-          <picture>
-            <img
-              src="img/seresco.jpeg"
-              alt="deimos picture"
-              loading="lazy"
-              height="64"
-              width="64"
-          /></picture>
+          <div>
+            <h3>Software Engineer Intership</h3>
+            <p class="date">
+              <time datetime="01-06-2019">Junio de 2019</time> -
+              <time datetime="30-09-2019">Septiembre de 2019</time>
+            </p>
+            <picture>
+              <img
+                src="img/seresco.jpeg"
+                alt="deimos picture"
+                loading="lazy"
+                height="64"
+                width="64"
+            /></picture>
+          </div>
           <details>
             <summary>Descripción</summary>
             <p>
@@ -147,13 +151,12 @@
           </details>
         </article>
       </section>
-      <section>
+      <section class="line">
         <h2>Educación</h2>
         <article class="card">
           <h3>Máster de Ingeniería Web, Ingeniería informática</h3>
-          <p>
-            <time datetime="01-06-2020">Junio de 2020</time> -
-            <time datetime="01-06-2022">Junio de 2022</time>
+          <p class="date">
+            <time datetime="01-06-2020">Junio de 2020</time> - Actual
           </p>
           <picture>
             <img
@@ -166,7 +169,7 @@
         </article>
         <article class="card">
           <h3>Grado en Ingeniería, Ingeniería informática</h3>
-          <p>
+          <p class="date">
             <time datetime="01-01-2015">2015</time> -
             <time datetime="01-01-2020">2020</time>
           </p>
@@ -181,7 +184,7 @@
         </article>
       </section>
 
-      <section>
+      <section class="line">
         <h2>Licencias y certificaciones</h2>
         <article class="card">
           <h3>B2 First - Score 168</h3>
@@ -199,29 +202,50 @@
         </article>
       </section>
     </main>
-    <aside class="recommendations">
+    <aside>
       <h2>Recomendaciones</h2>
       <section>
         <h3>Libros recomendados</h3>
-        <article>
-          <h4>
-            Clean Architecture: A Craftsman's Guide to Software Structure and
-            Design: A Craftsman's Guide to Software Structure and Design (Robert
-            C. Martin Series)
-          </h4>
-        </article>
-        <article>
-          <h4>
-            Clean Code: A Handbook of Agile Software Craftsmanship (Robert C.
-            Martin Series)
-          </h4>
-        </article>
-        <article>
-          <h4>
-            Build: An Unorthodox Guide to Making Things Worth Making - The New
-            York Times bestseller
-          </h4>
-        </article>
+        <div class="books">
+          <article class="card">
+            <h4>
+              Clean Architecture: A Craftsman's Guide to Software Structure and
+              Design: A Craftsman's Guide to Software Structure and Design
+              (Robert C. Martin Series)
+            </h4>
+            <picture>
+              <img
+                src="img/clean_architecture.jpg"
+                alt="deimos picture"
+                loading="lazy"
+                height="64"
+                width="64"
+            /></picture>
+          </article>
+          <article class="card">
+            <h4>
+              Clean Code: A Handbook of Agile Software Craftsmanship (Robert C.
+              Martin Series)
+            </h4>
+            <picture>
+              <img
+                src="img/clean_code.jpg"
+                alt="deimos picture"
+                loading="lazy"
+                height="64"
+                width="64"
+            /></picture>
+          </article>
+          <article class="card">
+            <h4>
+              Build: An Unorthodox Guide to Making Things Worth Making - The New
+              York Times bestseller
+            </h4>
+            <picture>
+              <img src="img/build_book.jpg" alt="deimos picture" loading="lazy"
+            /></picture>
+          </article>
+        </div>
       </section>
       <section>
         <h3>Vídeos recomendados</h3>
