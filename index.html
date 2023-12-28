@@ -153,7 +153,7 @@
       </section>
       <section>
         <h2>Educación</h2>
-        <article class="line template">
+        <article class="template line">
           <div>
             <picture>
               <img
@@ -171,7 +171,7 @@
             </p>
           </div>
         </article>
-        <article class="line template">
+        <article class="template line">
           <div>
             <picture>
               <img
@@ -267,34 +267,58 @@
           </article>
         </div>
       </section>
-      <section>
+      <section class="slider-container">
         <h3>Vídeos recomendados</h3>
-        <article class="slider">
-          <iframe
-            src="https://www.youtube.com/embed/tiiGMyVKjOU"
-            title="¡Entrevista con el creador de Next.js! Guillermo Rauch y el futuro de la web [MiduConf]"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            src="https://www.youtube.com/embed/dWqNgzZwVJQ"
-            title="Bun is disrupting JavaScript land"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            src="https://www.youtube.com/embed/8aGhZQkoFbQ"
-            title='Philip Roberts: ¿Que diablos es el "event loop" (bucle de eventos) de todos modos? | JSConf EU'
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            src="https://www.youtube.com/embed/gudBYiubMfE"
-            title="PLAYTOMIC: Levantar 67M con una APP de PÁDEL | Podcast #290"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+        <article>
+          <div class="slider">
+            <a name="video1"
+              ><iframe
+                src="https://www.youtube.com/embed/tiiGMyVKjOU"
+                title="¡Entrevista con el creador de Next.js! Guillermo Rauch y el futuro de la web [MiduConf]"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </a>
+            <a name="video2"
+              ><iframe
+                src="https://www.youtube.com/embed/dWqNgzZwVJQ"
+                title="Bun is disrupting JavaScript land"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </a>
+            <a name="video3">
+              <iframe
+                src="https://www.youtube.com/embed/8aGhZQkoFbQ"
+                title='Philip Roberts: ¿Que diablos es el "event loop" (bucle de eventos) de todos modos? | JSConf EU'
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe
+            ></a>
+            <a name="video4">
+              <iframe
+                src="https://www.youtube.com/embed/gudBYiubMfE"
+                title="PLAYTOMIC: Levantar 67M con una APP de PÁDEL | Podcast #290"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </a>
+          </div>
         </article>
+        <ul class="markers">
+          <li>
+            <a href="#video1"></a>
+          </li>
+          <li>
+            <a href="#video2"></a>
+          </li>
+          <li>
+            <a href="#video3"></a>
+          </li>
+          <li>
+            <a href="#video4"></a>
+          </li>
+        </ul>
       </section>
     </aside>
     <a href="#" id="btn"><i class="fa-solid fa-arrow-up"></i></a>

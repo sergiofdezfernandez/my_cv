@@ -30,6 +30,12 @@ body {
     width: 100%;
   }
 }
+@keyframes activate {
+  0%,
+  100% {
+    background: var(--steel-blue-500);
+  }
+}
 @keyframes blink-caret {
   from,
   to {
@@ -59,12 +65,14 @@ main {
   flex-direction: column;
   padding: 20px;
 }
+
 main section {
   flex: 3;
 }
 aside {
   flex: auto;
   align-items: flex-end;
+  padding: 20px;
 }
 
 header img {
@@ -80,13 +88,25 @@ footer {
   flex: 1;
 }
 
-iframe {
-  flex: 0 0 50vw;
-  height: 38em;
-  padding: 1em;
+.slider a iframe {
+  flex: 0 0 100%;
+  width: 100%;
   border: none;
-  border-radius: 30px;
+  height: 100%;
 }
+.markers li:nth-child(1) {
+  --i: 1;
+}
+.markers li:nth-child(2) {
+  --i: 2;
+}
+.markers li:nth-child(3) {
+  --i: 3;
+}
+.markers li:nth-child(4) {
+  --i: 4;
+}
+
 ul {
   display: inline-flex;
   list-style-type: none;
@@ -98,31 +118,66 @@ address a {
   color: var(--steel-blue-200);
 }
 .slider {
+  scroll-timeline: --carousel x;
   display: flex;
+  flex-direction: row;
+  width: 100%;
   scroll-snap-type: x mandatory;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+
   overflow-x: scroll;
   overflow-y: hidden;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+}
+.markers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.25em;
+  list-style: none;
+  padding: 1em;
+}
+.markers a {
+  display: block;
+  width: 16px;
+  aspect-ratio: 1;
+  background: white;
+  opacity: 0.7;
+  border-radius: 50%;
+
+  animation: activate linear;
+  animation-timeline: --carousel;
+  animation-range: calc((var(--i) - 1) * 25%) calc(var(--i) * 25% + 1px);
+}
+.markers a:hover {
+  background: var(--steel-blue-700);
+}
+
+.slider-container {
+  timeline-scope: --carousel;
 }
 .slider::-webkit-scrollbar {
   display: none;
 }
-.slider iframe {
+.slider a {
+  flex: 0 0 100%;
   scroll-snap-align: center;
+  aspect-ratio: 16/9;
+  width: 100%;
+  padding: 1em;
+  border: none;
   outline: none;
 }
 #btn {
   color: var(--steel-blue-50);
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  right: 1rem;
   z-index: 99;
   font-size: 15px;
   border: none;
   outline: none;
   background-color: var(--steel-blue-800);
-  color: var(--steel-blue-100);
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
@@ -189,8 +244,12 @@ details > *:not(summary) {
 @media (max-width: 928px) {
   .abilities,
   .slider,
-  .books {
-    flex-direction: column; /* Change layout to column */
+  .books,
+  .template {
+    flex-direction: column;
+  }
+  .markers {
+    display: none;
   }
   .social {
     grid-template-columns: repeat(1, 1fr);
