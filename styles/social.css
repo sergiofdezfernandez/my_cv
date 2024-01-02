@@ -1,0 +1,18 @@
+.social {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 5px;
+  font-size: 3em;
+}
+
+.social a {
+  color: var(--steel-blue-300);
+}
+
+.social a:hover {
+  color: var(--steel-blue-50);
+  background: var(--steel-blue-900);
+  border: 1px solid var(--steel-blue-900);
+  transform: scale(1.2);
+}

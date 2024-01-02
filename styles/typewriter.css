@@ -1,0 +1,7 @@
+.typewriter {
+  animation: typing 4s steps(44) 1s 1 normal both,
+    blink-caret 1s steps(44) 7 normal forwards;
+  overflow: hidden;
+  border-right: 0.15em solid var(--steel-blue-300);
+  white-space: nowrap;
+}

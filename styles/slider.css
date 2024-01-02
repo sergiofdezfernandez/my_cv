@@ -1,0 +1,71 @@
+.slider-container {
+  timeline-scope: --carousel;
+}
+.slider {
+  scroll-timeline: --carousel x;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.markers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.25em;
+  list-style: none;
+  padding: 1em;
+}
+.markers a {
+  display: block;
+  width: 16px;
+  aspect-ratio: 1/1;
+  background: white;
+  opacity: 0.7;
+  border-radius: 50%;
+
+  animation: activate linear;
+  animation-timeline: --carousel;
+  animation-range: calc((var(--i) - 1) * 25%) calc(var(--i) * 25% + 1px);
+}
+.markers a:hover {
+  background: var(--steel-blue-700);
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.slider div {
+  flex: 0 0 100%;
+}
+.slider div iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  outline: none;
+  padding: 1em;
+  scroll-snap-align: center;
+}
+.slider a iframe {
+  flex: 0 0 100%;
+  width: 100%;
+  border: none;
+  height: 100%;
+}
+.markers li:nth-child(1) {
+  --i: 1;
+}
+.markers li:nth-child(2) {
+  --i: 2;
+}
+.markers li:nth-child(3) {
+  --i: 3;
+}
+.markers li:nth-child(4) {
+  --i: 4;
+}

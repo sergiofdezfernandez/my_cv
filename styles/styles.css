@@ -1,4 +1,10 @@
 @import url("variables.css");
+@import url("animations.css");
+@import url("slider.css");
+@import url("float-button.css");
+@import url("social.css");
+@import url("typewriter.css");
+@import url("responsive.css");
 
 html {
   scroll-behavior: smooth;
@@ -15,36 +21,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-.typewriter {
-  animation: typing 4s steps(44) 1s 1 normal both,
-    blink-caret 1s steps(44) 7 normal forwards;
-  overflow: hidden;
-  border-right: 0.15em solid var(--steel-blue-300);
-  white-space: nowrap;
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes activate {
-  0%,
-  100% {
-    background: var(--steel-blue-500);
-  }
-}
-@keyframes blink-caret {
-  from,
-  to {
-    border-right-color: transparent;
-  }
-  50% {
-    border-color: var(--steel-blue-300);
-  }
-}
+
 h1::after {
   content: "";
   display: block;
@@ -59,6 +36,7 @@ header {
   flex: 1;
   text-align: center;
 }
+
 main {
   flex: 3;
   display: flex;
@@ -87,151 +65,14 @@ footer {
   padding: 1em;
   flex: 1;
 }
-
-.slider a iframe {
-  flex: 0 0 100%;
-  width: 100%;
-  border: none;
-  height: 100%;
-}
-.markers li:nth-child(1) {
-  --i: 1;
-}
-.markers li:nth-child(2) {
-  --i: 2;
-}
-.markers li:nth-child(3) {
-  --i: 3;
-}
-.markers li:nth-child(4) {
-  --i: 4;
-}
-
-ul {
-  display: inline-flex;
-  list-style-type: none;
-  gap: 1em;
-  padding: 0;
-  margin: 0;
-}
 address a {
   color: var(--steel-blue-200);
 }
-.slider {
-  scroll-timeline: --carousel x;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  scroll-snap-type: x mandatory;
-  overscroll-behavior: contain;
-  scroll-behavior: smooth;
-
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-.markers {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 0.25em;
-  list-style: none;
-  padding: 1em;
-}
-.markers a {
-  display: block;
-  width: 16px;
-  aspect-ratio: 1;
-  background: white;
-  opacity: 0.7;
-  border-radius: 50%;
-
-  animation: activate linear;
-  animation-timeline: --carousel;
-  animation-range: calc((var(--i) - 1) * 25%) calc(var(--i) * 25% + 1px);
-}
-.markers a:hover {
-  background: var(--steel-blue-700);
-}
-
-.slider-container {
-  timeline-scope: --carousel;
-}
-.slider::-webkit-scrollbar {
-  display: none;
-}
-.slider a {
-  flex: 0 0 100%;
-  scroll-snap-align: center;
-  aspect-ratio: 16/9;
-  width: 100%;
-  padding: 1em;
-  border: none;
-  outline: none;
-}
-#btn {
-  color: var(--steel-blue-50);
-  position: fixed;
-  bottom: 10px;
-  right: 1rem;
-  z-index: 99;
-  font-size: 15px;
-  border: none;
-  outline: none;
-  background-color: var(--steel-blue-800);
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
-#btn:hover {
-  background-color: var(--steel-blue-100);
-  color: var(--steel-blue-700);
-}
-
-.social {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 5px;
-  font-size: 3em;
-}
-
-.social a {
-  color: var(--steel-blue-300);
-}
-
-.social a:hover {
-  color: var(--steel-blue-50);
-  background: var(--steel-blue-900);
-  border: 1px solid var(--steel-blue-900);
-  transform: scale(1.2);
-}
-
 .card {
-  border-radius: 2%;
+  border-radius: 5%;
   overflow: hidden;
-
   padding: 1em;
   margin: 1em;
-}
-
-details {
-  border: 1px solid var(--steel-blue-100);
-  border-radius: 4px;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-summary {
-  font-weight: bold;
-  cursor: pointer;
-}
-
-details[open] {
-  background-color: var(--steel-blue-800);
-}
-
-details > *:not(summary) {
-  margin-left: 20px;
 }
 
 .abilities {
@@ -241,23 +82,7 @@ details > *:not(summary) {
 .abilities section {
   background-color: var(--steel-blue-700);
 }
-@media (max-width: 928px) {
-  .abilities,
-  .slider,
-  .books,
-  .template {
-    flex-direction: column;
-  }
-  .markers {
-    display: none;
-  }
-  .social {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  h1 {
-    font-size: 1em;
-  }
-}
+
 .books {
   display: flex;
   gap: 2em;
@@ -267,10 +92,11 @@ details > *:not(summary) {
 .books img {
   width: 200px;
   height: 20em;
+  padding: 1em;
   border-radius: 10%;
 }
 .books .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
 }
 .books .card {

@@ -1,0 +1,23 @@
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes activate {
+  0%,
+  100% {
+    background: var(--steel-blue-500);
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-color: var(--steel-blue-300);
+  }
+}

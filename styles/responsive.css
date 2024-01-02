@@ -1,0 +1,17 @@
+@media (max-width: 928px) {
+  .abilities,
+  .slider,
+  .books,
+  .template {
+    flex-direction: column;
+  }
+  .markers {
+    display: none;
+  }
+  .social {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  h1 {
+    font-size: 1em;
+  }
+}
